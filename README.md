@@ -1,16 +1,22 @@
 # code_hub
 
-A new Flutter project.
+This project consists the collection of codes for easy reference.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Code List:
++ Device Preview (Allows preview on different devices in the emulator)
++ Responsive Builder (Responsive UI for screen sizes)
++ Getx (State Management Package with extra features)
+    - Snackbar
+    - Dialog
+    - Bottom Sheet
+    - Unnamed Routing
+    - Named Routing
+    - Reactive State Management using Obx
+    - State Management using Obx & Custom Class
+    - 
++
++
++
++
++
++

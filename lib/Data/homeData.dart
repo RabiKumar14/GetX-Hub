@@ -1,9 +1,8 @@
-import 'package:code_hub/screens/classState.dart';
-import 'package:code_hub/screens/reactiveState.dart';
-import 'package:code_hub/screens/unnamedRoutesPage.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:code_hub/Exports/export.dart';
+import 'package:code_hub/UI/statePage.dart';
+import 'package:code_hub/UI/unnamedRoutesPage.dart';
 
+//! Required parameters for the item
 class HomeItem {
   final String title;
   final String subtitle;
@@ -12,11 +11,13 @@ class HomeItem {
   HomeItem({required this.title, required this.subtitle, required this.action});
 }
 
+//! Home Page items list
 List<HomeItem> homeList = [
   HomeItem(
       title: 'Snackbar',
       subtitle: 'Getx Snackbar that allows customisation.',
       action: () {
+        //! GetX Snackbar
         Get.snackbar(
           'Snackbar Title', 'Snackbar Message',
           snackPosition: SnackPosition.BOTTOM,
@@ -56,6 +57,7 @@ List<HomeItem> homeList = [
           onTap: (val) {
             print('Clicked');
           },
+          //! overlay is broken
 // overlayBlur: 5,
 // overlayColor: Colors.pink
           padding: EdgeInsets.all(40),
@@ -71,10 +73,12 @@ List<HomeItem> homeList = [
           ),
         );
       }),
+
   HomeItem(
       title: 'Show Dialog',
       subtitle: 'GetX Dialog that allows customisation',
       action: () {
+        //! GetX Show Dialog
         Get.defaultDialog(
           title: 'Dialog Title',
           titleStyle: TextStyle(fontSize: 11),
@@ -123,10 +127,12 @@ List<HomeItem> homeList = [
           barrierDismissible: true,
         );
       }),
+
   HomeItem(
       title: 'Bottom Sheet',
       subtitle: 'GetX Bottom Sheet',
       action: () {
+        //! GetX Bottom Sheet
         Get.bottomSheet(
             Center(
               child: Text(
@@ -137,29 +143,26 @@ List<HomeItem> homeList = [
             barrierColor: Colors.blue.withOpacity(0.5),
             backgroundColor: Colors.pink);
       }),
+  //! GetX Unnamed Route
   HomeItem(
       title: 'Unnamed Routes',
       subtitle: 'GetX Unnamed Routes',
       action: () {
         Get.to(UnnamedRoutes());
       }),
+  //! GetX Named Route
   HomeItem(
       title: 'Named Routes',
       subtitle: 'GetX Named Routes',
       action: () {
         Get.toNamed('/namedRoute');
       }),
+  //! GetX Controller State Management using Obx
   HomeItem(
-      title: 'Reactive State Management',
-      subtitle: 'GetX State Management using Obx',
+      title: 'Controller State Management',
+      subtitle: 'GetX Controller to manage State Management',
       action: () {
-        Get.to(RState());
-      }),
-  HomeItem(
-      title: 'Obx & Custom Class State Management',
-      subtitle: 'Getx State Management\nusing Obx & Custom Class',
-      action: () {
-        Get.to(StateMng());
+        Get.to(StatePage());
       }),
   HomeItem(title: 'Empty', subtitle: '', action: () {}),
 ];

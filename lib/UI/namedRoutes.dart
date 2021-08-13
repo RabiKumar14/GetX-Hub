@@ -1,7 +1,6 @@
-import 'package:code_hub/screens/homePage.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:code_hub/Exports/export.dart';
 
+//! Named Routing, should only be used in Web
 class NamedRoutes extends StatelessWidget {
   const NamedRoutes({Key? key}) : super(key: key);
 
@@ -13,32 +12,36 @@ class NamedRoutes extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          //! Named Routing with option to return to prev screen
           ListTile(
             title: Text('toNamed() to Page 2'),
             trailing: Text('With option to return to prev screen'),
             onTap: () {
-              Get.toNamed('/page2/0');
+              Get.toNamed('/page2');
             },
           ),
+          //! Named Routing with no option to return to prev screen
           ListTile(
             title: Text('offNamed() to Page 2'),
             trailing: Text('No option to return to prev screen'),
             onTap: () {
-              Get.offNamed('/page2/0');
+              Get.offNamed('/page2');
             },
           ),
+          //! Named Routing with no option to return any prev screens
           ListTile(
             title: Text('offAllNamed() to Page 2'),
             trailing: Text('No option to return to all prev screen'),
             onTap: () {
-              Get.offAllNamed('/page/0');
+              Get.offAllNamed('/page2');
             },
           ),
+          //! Named Routing with option to pass value to the next screen
           ListTile(
             title: Text('toNamed() to Page 2 with value'),
             trailing: Text('Passing value to next screen'),
             onTap: () {
-              Get.toNamed('/page2/newdata1234');
+              Get.toNamed('/page2d/newdata1234');
             },
           )
         ],
@@ -66,6 +69,7 @@ class Page2 extends StatelessWidget {
               );
             },
           ),
+          //! Gets the value from the prev screen
           ListTile(
             title: Text('${Get.parameters['data']}'),
           )

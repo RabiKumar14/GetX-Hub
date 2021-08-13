@@ -11,9 +11,10 @@ Code List:
     - Bottom Sheet
     - Unnamed Routing
     - Named Routing
-    - Reactive State Management using Obx
-    - State Management using Obx & Custom Class
-    - 
+    - Reactive State Management using Obx (Removed)
+    - State Management using Obx & Custom Class (Removed)
+    - State Management using Controller 
+    - Reactive State Management using Controller Type (Removed)
 +
 +
 +

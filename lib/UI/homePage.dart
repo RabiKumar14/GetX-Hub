@@ -1,7 +1,8 @@
-import 'package:code_hub/homeData.dart';
-import 'package:flutter/material.dart';
+import 'package:code_hub/Data/homeData.dart';
+import 'package:code_hub/Exports/export.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
+//! Main Page of the app
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -12,11 +13,15 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text('Code Hub'),
         ),
+        //! Responsive Builder that checks the screen type and applies the specified page
         body: ResponsiveBuilder(
           builder: (context, sizingInformation) {
-            if (sizingInformation.deviceScreenType == DeviceScreenType.desktop ||
+            //! Page for desktop and table screen sizes
+            if (sizingInformation.deviceScreenType ==
+                    DeviceScreenType.desktop ||
                 sizingInformation.deviceScreenType == DeviceScreenType.tablet) {
               return Wrap(
+                //! Uses the homeList list to make the widget based on the length of the list
                 children: homeList.map((e) {
                   return Padding(
                     padding: const EdgeInsets.all(10),
@@ -34,7 +39,8 @@ class HomePage extends StatelessWidget {
                             ),
                             Text(
                               e.subtitle,
-                              style: TextStyle(fontSize: 15, color: Colors.black),
+                              style:
+                                  TextStyle(fontSize: 15, color: Colors.black),
                             )
                           ],
                         ),
@@ -42,9 +48,10 @@ class HomePage extends StatelessWidget {
                     ),
                   );
                 }).toList(),
-              
               );
-            } else {
+            }
+            //! Page for mobile screen size and below
+            else {
               return ListView(
                 children: homeList.map((e) {
                   return ListTile(
@@ -59,7 +66,6 @@ class HomePage extends StatelessWidget {
                     onTap: e.action,
                   );
                 }).toList(),
-                
               );
             }
           },

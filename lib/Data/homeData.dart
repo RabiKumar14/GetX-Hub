@@ -1,5 +1,6 @@
 import 'package:code_hub/Exports/export.dart';
 import 'package:code_hub/UI/statePage.dart';
+import 'package:code_hub/UI/stateUID.dart';
 import 'package:code_hub/UI/unnamedRoutesPage.dart';
 
 //! Required parameters for the item
@@ -160,9 +161,16 @@ List<HomeItem> homeList = [
   //! GetX Controller State Management using Obx
   HomeItem(
       title: 'Controller State Management',
-      subtitle: 'GetX Controller to manage State Management',
+      subtitle: 'GetX Controller to manage State',
       action: () {
         Get.to(StatePage());
+      }),
+  //! Getx Controller State Management using Unique ID
+  HomeItem(
+      title: 'UID State Management',
+      subtitle: 'Getx Controller using Unique ID to manage State',
+      action: () {
+        Get.to(UIDState());
       }),
   HomeItem(title: 'Empty', subtitle: '', action: () {}),
 ];

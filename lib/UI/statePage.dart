@@ -9,6 +9,7 @@ import 'package:code_hub/Exports/export.dart';
 // final items = RxList([]);
 // final myMap = RxMap({});
 
+///[StatePage]  GetX State Management using Controller page
 // ignore: must_be_immutable
 class StatePage extends StatelessWidget {
   //! Call the Name Controller

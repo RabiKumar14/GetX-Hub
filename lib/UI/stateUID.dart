@@ -1,6 +1,7 @@
 import 'package:code_hub/Controls/stateUIDControl.dart';
 import 'package:code_hub/Exports/export.dart';
 
+///[UIDState] GetX State Management using Controller & Unique ID page
 class UIDState extends StatelessWidget {
   const UIDState({Key? key}) : super(key: key);
 

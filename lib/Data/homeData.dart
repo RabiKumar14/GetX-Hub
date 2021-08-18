@@ -1,9 +1,11 @@
 import 'package:code_hub/Exports/export.dart';
+import 'package:code_hub/UI/getxInternalisation.dart';
+import 'package:code_hub/UI/getxWorkers.dart';
 import 'package:code_hub/UI/statePage.dart';
 import 'package:code_hub/UI/stateUID.dart';
 import 'package:code_hub/UI/unnamedRoutesPage.dart';
 
-//! Required parameters for the item
+///[HomeItem] Required parameters of the home item
 class HomeItem {
   final String title;
   final String subtitle;
@@ -171,6 +173,19 @@ List<HomeItem> homeList = [
       subtitle: 'Getx Controller using Unique ID to manage State',
       action: () {
         Get.to(UIDState());
+      }),
+  //! GetX Workers & what they do
+  HomeItem(
+      title: 'GetX Workers',
+      subtitle: 'List of GetX Workers',
+      action: () {
+        Get.to(GetXWorkers());
+      }),
+  HomeItem(
+      title: 'Internalisation',
+      subtitle: 'Implementing Internalisation using GetX',
+      action: () {
+        Get.to(GetXInternalisation());
       }),
   HomeItem(title: 'Empty', subtitle: '', action: () {}),
 ];

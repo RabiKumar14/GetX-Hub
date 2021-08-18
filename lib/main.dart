@@ -1,5 +1,8 @@
+import 'package:code_hub/Data/languagesData.dart';
 import 'package:code_hub/Exports/export.dart';
+import 'package:code_hub/UI/homePage.dart';
 import 'package:code_hub/UI/namedRoutes.dart';
+import 'package:device_preview/device_preview.dart';
 
 //!Pages List of all Getx Named Routes
 List<GetPage> pagesList = [
@@ -20,6 +23,7 @@ List<GetPage> pagesList = [
 
 void main() {
   runApp(
+    // MyApp()
     //!Device Preview package used to show UI on different devices in the emulator
     DevicePreview(
       enabled: true,
@@ -33,14 +37,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: '/',
+      // initialRoute: '/',
       defaultTransition: Transition.zoom,
       getPages: [...pagesList],
-      locale: DevicePreview.locale(context),
+      //! Adds the languages
+      translations: Languages(),
+      //! Detects the local phone language
+      locale: Get.deviceLocale,
+      // Locale('en', 'UK'),
+      //! Assigns the language when assigned langugae fails
+      fallbackLocale: Locale('en', 'UK'),
+      // locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      // home: SafeArea(
-      //   child: HomePage(),
-      // ),
+      home: SafeArea(
+        child: HomePage(),
+      ),
       //! Use home & remove initialRoute & getPages when using unNamed Routes
     );
   }

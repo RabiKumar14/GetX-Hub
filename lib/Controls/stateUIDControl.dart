@@ -1,7 +1,7 @@
 import 'package:code_hub/Data/stateData.dart';
 import 'package:code_hub/Exports/export.dart';
 
-//! Getx Controller using Unique ID
+///[UIDController] Controls the age and updates using an unique id
 class UIDController extends GetxController {
   int age = rabi.age;
 

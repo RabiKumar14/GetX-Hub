@@ -1,7 +1,7 @@
 import 'package:code_hub/Data/stateData.dart';
 import 'package:code_hub/Exports/export.dart';
 
-//! Name Controller
+///[NameController] Controls what happens with the name data
 class NameController extends GetxController {
   var name = rabi.obs;
   //! Function to convert string to upper case

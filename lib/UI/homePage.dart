@@ -2,7 +2,7 @@ import 'package:code_hub/Data/homeData.dart';
 import 'package:code_hub/Exports/export.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-//! Main Page of the app
+///[HomePage] Main page of the app
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 

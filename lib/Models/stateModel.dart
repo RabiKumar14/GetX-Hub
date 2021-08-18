@@ -1,4 +1,4 @@
-//! Name Model
+///[Name] Name model
 class Name {
 //! Name constructor
   var firstName;

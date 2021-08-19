@@ -15,6 +15,12 @@ Code List:
     - State Management using Obx & Custom Class (Removed)
     - State Management using Controller 
     - Reactive State Management using Controller Type (Removed)
+    - State Management using GetBuilder
+    - State Management using Unique ID
+    - Workers
+    - Internalisation/Localisation
+    - Dependancy Injection
+    - Services
 +
 +
 +

@@ -1,10 +1,19 @@
-import 'package:code_hub/Controls/languageController.dart';
-import 'package:code_hub/Exports/export.dart';
+import 'package:code_hub/export.dart';
+import 'package:code_hub/getxInternalisation/InternalisationController.dart';
+import 'package:code_hub/home.dart';
 
-///[GetXInternalisation] Internalisation Page
-// ignore: must_be_immutable
-class GetXInternalisation extends StatelessWidget {
-  LanController lanController = Get.put(LanController());
+//! GetX internalisation/localisation to detect language
+var internalisation = HomeItem(
+    title: 'Internalisation',
+    subtitle: 'Implementing Internalisation using GetX',
+    action: () {
+      Get.to(Internalisation());
+    });
+
+///[Internalisation] Internalisation Page
+class Internalisation extends StatelessWidget {
+  final InternalisationController lanController =
+      Get.put(InternalisationController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(

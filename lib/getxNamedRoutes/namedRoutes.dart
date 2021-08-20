@@ -1,5 +1,13 @@
-import 'package:code_hub/Exports/export.dart';
-import 'package:code_hub/UI/homePage.dart';
+import 'package:code_hub/export.dart';
+import 'package:code_hub/home.dart';
+
+//! GetX Named Route
+var namedRoutes = HomeItem(
+    title: 'Named Routes',
+    subtitle: 'GetX Named Routes',
+    action: () {
+      Get.toNamed('/namedRoute');
+    });
 
 ///[NamedRoutes] Named Routing Page, should only be using in Web
 class NamedRoutes extends StatelessWidget {

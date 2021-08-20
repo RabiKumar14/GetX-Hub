@@ -1,4 +1,4 @@
-import 'package:code_hub/Exports/export.dart';
+import 'package:code_hub/export.dart';
 
 ///[WorkerController] controls the different GetX workers that checks state changes
 class WorkerController extends GetxController {

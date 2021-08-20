@@ -1,6 +1,42 @@
-import 'package:code_hub/Data/homeData.dart';
-import 'package:code_hub/Exports/export.dart';
+import 'package:code_hub/export.dart';
+import 'package:code_hub/getxBinding/binding.dart';
+import 'package:code_hub/getxBottomSheet/bottomSheet.dart';
+import 'package:code_hub/getxDependancyInjection/dependancyInjection.dart';
+import 'package:code_hub/getxDialog/dialog.dart';
+import 'package:code_hub/getxInternalisation/internalisation.dart';
+import 'package:code_hub/getxNamedRoutes/namedRoutes.dart';
+import 'package:code_hub/getxServices/service.dart';
+import 'package:code_hub/getxUnnamedRoutes/unnamedRoutes.dart';
+import 'package:code_hub/getxWorkers/workers.dart';
+import 'package:code_hub/getxControllerStateObx/stateObx.dart';
+import 'package:code_hub/getxControllerStateGetBuilderUID/stateGetBuilderUID.dart';
+import 'package:code_hub/getxSnackBar/snackbar.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+///[HomeItem] Required parameters of the home item
+class HomeItem {
+  final String title;
+  final String subtitle;
+  final VoidCallback action;
+
+  HomeItem({required this.title, required this.subtitle, required this.action});
+}
+
+//! Home Page items list
+List<HomeItem> homeList = [
+  snackbar,
+  dialog,
+  bottomsheet,
+  unnamedRoutes,
+  namedRoutes,
+  stateObx,
+  stateGetBuilderUID,
+  workers,
+  internalisation,
+  dependancyInjection,
+  service,
+  binding
+];
 
 ///[HomePage] Main page of the app
 class HomePage extends StatelessWidget {

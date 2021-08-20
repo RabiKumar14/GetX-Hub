@@ -1,5 +1,13 @@
-import 'package:code_hub/Exports/export.dart';
-import 'package:code_hub/UI/homePage.dart';
+import 'package:code_hub/export.dart';
+import 'package:code_hub/home.dart';
+
+//! GetX Unnamed Route
+var unnamedRoutes = HomeItem(
+    title: 'Unnamed Routes',
+    subtitle: 'GetX Unnamed Routes',
+    action: () {
+      Get.to(UnnamedRoutes());
+    });
 
 ///[UnnamedRoutes] Unamed Routing Page - Most suitable when not using web
 class UnnamedRoutes extends StatelessWidget {

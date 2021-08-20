@@ -5,3 +5,6 @@ class Name {
   var age;
   Name({this.firstName, this.age});
 }
+
+//! Name Data
+var rabi = Name(firstName: 'Rabi', age: 18);

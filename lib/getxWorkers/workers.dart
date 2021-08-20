@@ -1,10 +1,18 @@
-import 'package:code_hub/Controls/getxWorkerControl.dart';
-import 'package:code_hub/Exports/export.dart';
+import 'package:code_hub/getxWorkers/workersController.dart';
+import 'package:code_hub/export.dart';
+import 'package:code_hub/home.dart';
 
-///[GetXWorkers] GetX Workers page
-// ignore: must_be_immutable
-class GetXWorkers extends StatelessWidget {
-  WorkerController workerController = Get.put(WorkerController());
+//! GetX Workers & what they do
+var workers = HomeItem(
+    title: 'GetX Workers',
+    subtitle: 'List of GetX Workers',
+    action: () {
+      Get.to(Workers());
+    });
+
+///[Workers] GetX Workers page
+class Workers extends StatelessWidget {
+  final WorkerController workerController = Get.put(WorkerController());
 
   @override
   Widget build(BuildContext context) {

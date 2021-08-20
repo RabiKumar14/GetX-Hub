@@ -1,8 +1,8 @@
-import 'package:code_hub/Data/stateData.dart';
-import 'package:code_hub/Exports/export.dart';
+import 'package:code_hub/exampleData.dart';
+import 'package:code_hub/export.dart';
 
-///[NameController] Controls what happens with the name data
-class NameController extends GetxController {
+///[StateObxController] Controls what happens with the name data
+class StateObxController extends GetxController {
   var name = rabi.obs;
   //! Function to convert string to upper case
   void convertToUpperCase() {

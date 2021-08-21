@@ -8,6 +8,7 @@ import 'package:code_hub/getxNamedRoutes/namedRoutes.dart';
 import 'package:code_hub/getxServices/serviceController.dart';
 import 'package:code_hub/home.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:get_storage/get_storage.dart';
 
 //!Pages List of all Getx Named Routes
 List<GetPage> pagesList = [
@@ -33,6 +34,7 @@ List<GetPage> pagesList = [
 ];
 
 Future<void> main() async {
+  await GetStorage.init();
   await initServices();
   //! Initialising controller bindings at the start of the app
   // MyControllerBinding().dependencies();

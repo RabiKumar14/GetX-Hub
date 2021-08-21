@@ -22,6 +22,11 @@ Code List:
     - Dependancy Injection
     - Services
     - Bindings
+    - Storage
+    - Email Validation (Do not use GetX email validator)
+    - GetWidget (Removed - If need singleton to be off, then use this)
+    - GetView
+    - Get CLI (Check Todo App in GitHub)
 +
 +
 +

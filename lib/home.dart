@@ -21,7 +21,11 @@ class HomeItem {
   final String subtitle;
   final VoidCallback action;
 
-  HomeItem({required this.title, required this.subtitle, required this.action});
+  HomeItem({
+    required this.title,
+    required this.subtitle,
+    required this.action,
+  });
 }
 
 //! Home Page items list
@@ -39,7 +43,7 @@ List<HomeItem> homeList = [
   service,
   binding,
   storageAndEmailValidation,
-  getviewPage
+  getviewPage,
 ];
 
 ///[HomePage] Main page of the app

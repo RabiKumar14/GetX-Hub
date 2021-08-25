@@ -11,20 +11,6 @@ class AllControllerBinding implements Bindings {
   }
 }
 
-// class MyControllerBinding implements Bindings {
-//   @override
-//   void dependencies() {
-//     Get.put<MyController>(MyController());
-//   }
-// }
-
-// class HomeControllerBinding implements Bindings {
-//   @override
-//   void dependencies() {
-//
-//   }
-// }
-
 class MyController extends GetxController {
   var count = 0.obs;
   void increment() {

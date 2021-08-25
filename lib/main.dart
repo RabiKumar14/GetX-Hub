@@ -75,7 +75,7 @@ class MyApp extends StatelessWidget {
       smartManagement: SmartManagement.full,
       //! Initialising the controller bindings globally in the app
       initialBinding: AllControllerBinding(),
-      // initialRoute: '/',
+      initialRoute: '/',
       defaultTransition: Transition.zoom,
       getPages: [...pagesList],
       //! Adds the languages

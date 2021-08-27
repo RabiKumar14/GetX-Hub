@@ -1,4 +1,6 @@
+import 'package:code_hub/customPainterUI/painterUI.dart';
 import 'package:code_hub/export.dart';
+import 'package:code_hub/firebaseAuthWithGetX/loginFirebase.dart';
 import 'package:code_hub/getxBinding/binding.dart';
 import 'package:code_hub/getxBottomSheet/bottomSheet.dart';
 import 'package:code_hub/getxDependancyInjection/dependancyInjection.dart';
@@ -44,6 +46,8 @@ List<HomeItem> homeList = [
   binding,
   storageAndEmailValidation,
   getviewPage,
+  customPainter,
+  // todoApp
 ];
 
 ///[HomePage] Main page of the app

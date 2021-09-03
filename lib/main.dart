@@ -7,8 +7,10 @@ import 'package:code_hub/export.dart';
 import 'package:code_hub/getxNamedRoutes/namedRoutes.dart';
 import 'package:code_hub/getxServices/serviceController.dart';
 import 'package:code_hub/home.dart';
+import 'package:code_hub/portfolio/constants.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 //!Pages List of all Getx Named Routes
 List<GetPage> pagesList = [
@@ -71,6 +73,17 @@ class MyApp extends StatelessWidget {
         () async => DependancyInjectionController());
 
     return GetMaterialApp(
+      theme: ThemeData.dark().copyWith(
+        primaryColor: priColour,
+        scaffoldBackgroundColor: bgColor,
+        canvasColor: bgColor,
+        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+            .apply(bodyColor: Colors.white)
+            .copyWith(
+              bodyText1: TextStyle(color: bodyTextColor),
+              bodyText2: TextStyle(color: bodyTextColor),
+            ),
+      ),
       //! GetX memory management system
       smartManagement: SmartManagement.full,
       //! Initialising the controller bindings globally in the app

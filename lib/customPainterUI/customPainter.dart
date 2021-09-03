@@ -1,8 +1,8 @@
 import 'dart:math';
 import 'dart:ui';
-
 import '../export.dart';
 
+//! Constant colour pallete
 class Palette {
   static const Color darkBlue = Color(0xff092E34);
   static const Color lightBlue = Color(0xff489FB5);

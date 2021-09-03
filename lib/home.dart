@@ -1,6 +1,6 @@
 import 'package:code_hub/customPainterUI/painterUI.dart';
+import 'package:code_hub/customResponsiveBuilder/screenTypes.dart';
 import 'package:code_hub/export.dart';
-import 'package:code_hub/firebaseAuthWithGetX/loginFirebase.dart';
 import 'package:code_hub/getxBinding/binding.dart';
 import 'package:code_hub/getxBottomSheet/bottomSheet.dart';
 import 'package:code_hub/getxDependancyInjection/dependancyInjection.dart';
@@ -15,7 +15,7 @@ import 'package:code_hub/getxWorkers/workers.dart';
 import 'package:code_hub/getxControllerStateObx/stateObx.dart';
 import 'package:code_hub/getxControllerStateGetBuilderUID/stateGetBuilderUID.dart';
 import 'package:code_hub/getxSnackBar/snackbar.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+import 'package:code_hub/portfolio/portfolioPage.dart';
 
 ///[HomeItem] Required parameters of the home item
 class HomeItem {
@@ -47,7 +47,7 @@ List<HomeItem> homeList = [
   storageAndEmailValidation,
   getviewPage,
   customPainter,
-  // todoApp
+  portfolio
 ];
 
 ///[HomePage] Main page of the app
@@ -61,60 +61,67 @@ class HomePage extends StatelessWidget {
         title: Text('Code Hub'),
       ),
       //! Responsive Builder that checks the screen type and applies the specified page
-      body: ResponsiveBuilder(
-        builder: (context, sizingInformation) {
-          //! Page for desktop and table screen sizes
-          if (sizingInformation.deviceScreenType == DeviceScreenType.desktop ||
-              sizingInformation.deviceScreenType == DeviceScreenType.tablet) {
-            return Wrap(
-              //! Uses the homeList list to make the widget based on the length of the list
-              children: homeList.map((e) {
-                return Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: TextButton(
-                    onPressed: e.action,
-                    child: Container(
-                      padding: EdgeInsets.all(20),
-                      child: Column(
-                        children: [
-                          Text(
-                            e.title,
-                            style: TextStyle(
-                              fontSize: 30,
-                            ),
-                          ),
-                          Text(
-                            e.subtitle,
-                            style: TextStyle(fontSize: 15, color: Colors.black),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                );
-              }).toList(),
-            );
-          }
-          //! Page for mobile screen size and below
-          else {
-            return ListView(
-              children: homeList.map((e) {
-                return ListTile(
-                  title: Text(
-                    e.title,
-                    style: TextStyle(fontSize: 14, color: Colors.blue),
-                  ),
-                  trailing: Text(
-                    e.subtitle,
-                    style: TextStyle(fontSize: 10),
-                  ),
-                  onTap: e.action,
-                );
-              }).toList(),
-            );
-          }
-        },
+      body: CustomResponsive(
+        desktop: HomeViews.desktop,
+        mobilePortrait: HomeViews.mobile,
+        mobileLandscape: HomeViews.desktop,
       ),
     );
   }
+}
+
+class HomeViews {
+  static final desktop = Center(
+    child: SingleChildScrollView(
+      child: Wrap(
+        //! Uses the homeList list to make the widget based on the length of the list
+        children: homeList.map((e) {
+          return Container(
+            padding: const EdgeInsets.all(10),
+            width: 330,
+            child: TextButton(
+              onPressed: e.action,
+              child: Container(
+                padding: EdgeInsets.all(20),
+                child: Column(
+                  children: [
+                    FittedBox(
+                      child: Text(
+                        e.title,
+                        style: TextStyle(
+                          fontSize: 30,
+                        ),
+                      ),
+                    ),
+                    FittedBox(
+                      child: Text(
+                        e.subtitle,
+                        style: TextStyle(fontSize: 15, color: Colors.black),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          );
+        }).toList(),
+      ),
+    ),
+  );
+
+  static final mobile = ListView(
+    children: homeList.map((e) {
+      return ListTile(
+        title: Text(
+          e.title,
+          style: TextStyle(fontSize: 14, color: Colors.blue),
+        ),
+        trailing: Text(
+          e.subtitle,
+          style: TextStyle(fontSize: 10),
+        ),
+        onTap: e.action,
+      );
+    }).toList(),
+  );
 }

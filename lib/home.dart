@@ -47,7 +47,7 @@ List<HomeItem> homeList = [
   storageAndEmailValidation,
   getviewPage,
   customPainter,
-  portfolio
+  portfolio,
 ];
 
 ///[HomePage] Main page of the app

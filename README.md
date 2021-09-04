@@ -4,7 +4,7 @@ This project consists the collection of codes for easy reference.
 
 Code List:
 + Device Preview (Allows preview on different devices in the emulator)
-+ Responsive Builder (Responsive UI for screen sizes)
++ Custom Responsive Screen
 + Getx (State Management Package with extra features)
     - Snackbar
     - Dialog
@@ -27,8 +27,9 @@ Code List:
     - GetWidget (Removed - If need singleton to be off, then use this)
     - GetView
     - Get CLI (Do not use, its good, but complicated when working with others)
+    - Firebase Auth
 + Custom Painter UI
-+
++ Portfolio Web Page Example
 +
 +
 +

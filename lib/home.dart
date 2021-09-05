@@ -1,3 +1,4 @@
+import 'package:code_hub/adminDashboardUI/dashboardPage.dart';
 import 'package:code_hub/customPainterUI/painterUI.dart';
 import 'package:code_hub/customResponsiveBuilder/screenTypes.dart';
 import 'package:code_hub/export.dart';
@@ -48,6 +49,7 @@ List<HomeItem> homeList = [
   getviewPage,
   customPainter,
   portfolio,
+  dashboard
 ];
 
 ///[HomePage] Main page of the app

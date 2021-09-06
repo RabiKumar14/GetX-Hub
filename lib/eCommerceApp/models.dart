@@ -312,6 +312,12 @@ class Product {
   double price;
 
   Product(this.image, this.name, this.description, this.price);
+
+  bool? get isSelected => null;
+
+  get isliked => null;
+
+  get category => null;
 }
 
 class Category {
@@ -321,4 +327,8 @@ class Category {
   String image;
 
   Category(this.begin, this.end, this.category, this.image);
+
+  get isSelected => null;
+
+  get name => null;
 }

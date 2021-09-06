@@ -2,6 +2,7 @@ import 'package:code_hub/adminDashboardUI/dashboardPage.dart';
 import 'package:code_hub/customPainterUI/painterUI.dart';
 import 'package:code_hub/customResponsiveBuilder/screenTypes.dart';
 import 'package:code_hub/eCommerceApp/screens/splash_page.dart';
+import 'package:code_hub/eCommerceApp2/pages/mainPage.dart';
 import 'package:code_hub/export.dart';
 import 'package:code_hub/getxBinding/binding.dart';
 import 'package:code_hub/getxBottomSheet/bottomSheet.dart';
@@ -54,7 +55,8 @@ List<HomeItem> homeList = [
   portfolio,
   dashboard,
   productPage,
-  eCommerce
+  eCommerce,
+  eCommerce2
 ];
 
 ///[HomePage] Main page of the app

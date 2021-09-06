@@ -40,7 +40,10 @@ Todo:
 - portfolio
 - adminDashboardUI
 - eCommerceApp
+- eCommerceApp2
 - customPainterUI
 
 Testing:
 - Custom Responsive Screen
+
+For Running without null safety: flutter run --no-sound-null-safety

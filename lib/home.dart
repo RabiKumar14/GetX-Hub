@@ -1,6 +1,7 @@
 import 'package:code_hub/adminDashboardUI/dashboardPage.dart';
 import 'package:code_hub/customPainterUI/painterUI.dart';
 import 'package:code_hub/customResponsiveBuilder/screenTypes.dart';
+import 'package:code_hub/eCommerceApp/screens/splash_page.dart';
 import 'package:code_hub/export.dart';
 import 'package:code_hub/getxBinding/binding.dart';
 import 'package:code_hub/getxBottomSheet/bottomSheet.dart';
@@ -16,7 +17,9 @@ import 'package:code_hub/getxWorkers/workers.dart';
 import 'package:code_hub/getxControllerStateObx/stateObx.dart';
 import 'package:code_hub/getxControllerStateGetBuilderUID/stateGetBuilderUID.dart';
 import 'package:code_hub/getxSnackBar/snackbar.dart';
+import 'package:code_hub/portfolio/dataModels/projectAndRecommendations.dart';
 import 'package:code_hub/portfolio/portfolioPage.dart';
+import 'package:code_hub/productPage/productPage.dart';
 
 ///[HomeItem] Required parameters of the home item
 class HomeItem {
@@ -49,7 +52,9 @@ List<HomeItem> homeList = [
   getviewPage,
   customPainter,
   portfolio,
-  dashboard
+  dashboard,
+  productPage,
+  eCommerce
 ];
 
 ///[HomePage] Main page of the app

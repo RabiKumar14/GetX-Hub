@@ -33,7 +33,8 @@ Code List:
 + Admin Dashboard Example
 + eCommerce App Example
 + Product Page Example
-+
++ eCommerce App 2 Example
++ GetX Analog Clock (Full of errors)
 
 Todo:
 - productPage
@@ -42,6 +43,7 @@ Todo:
 - eCommerceApp
 - eCommerceApp2
 - customPainterUI
+- GetX Analog Clock
 
 Testing:
 - Custom Responsive Screen

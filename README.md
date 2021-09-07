@@ -35,6 +35,7 @@ Code List:
 + Product Page Example
 + eCommerce App 2 Example
 + GetX Analog Clock (Full of errors)
++ Flukit
 
 Todo:
 - productPage
@@ -44,6 +45,7 @@ Todo:
 - eCommerceApp2
 - customPainterUI
 - GetX Analog Clock
+- Flukit
 
 Testing:
 - Custom Responsive Screen
